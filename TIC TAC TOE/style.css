@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 1px solid blue;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cell:hover{
+    background-color: coral;
+    transition: 4ms;
+}
+
+body{
+    animation-name: example;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+    0%{background-color: aqua;}
+    25%{background-color: blueviolet;}
+    50%{background-color: steelblue;}
+    75%{background-color: seagreen;}
+    100%{background-color: aqua;}
+}
+
+.cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 225px;
+}
+
+button{
+    width: 140px;
+    height: 30px;
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: aliceblue;
+    color: black;
+    /* transform: scale(1.1); */
+   transform: scale(1.2);
+    transition: 350ms;
+}
+
+@media (min-width:400px) and (max-width:400px) {
+    .cellContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#gameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
